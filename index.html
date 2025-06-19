@@ -1,108 +1,246 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <style>
-        body {
-          background-image: url('background/IMG20211009165501.jpg');
-        }
-        </style>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FinanceForensic</title>
+    <title>FinanceForensic | International Consulting for Consumer Finance</title>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:700,400&display=swap" rel="stylesheet">
     <style>
         body {
-            font-family: Arial, sans-serif;
             margin: 0;
-            padding: 0;
-            background-color: #f4f9f8;
-            color: #333;
+            font-family: 'Montserrat', Arial, sans-serif;
+            background: #f5f8fa;
+            color: #222;
         }
         header {
-            background-color: #e60800;
-            color: white;
-            padding: 15px 20px;
+            background: #1a2940;
+            color: #fff;
+            padding: 40px 0 30px 0;
             text-align: center;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+        }
+        header h1 {
+            font-size: 2.7rem;
+            margin: 0 0 10px 0;
+            letter-spacing: 2px;
+        }
+        header p {
+            font-size: 1.25rem;
+            margin: 0;
+            color: #b3c0d1;
         }
         nav {
+            background: #fff;
+            box-shadow: 0 1px 8px rgba(0,0,0,0.06);
             display: flex;
             justify-content: center;
-            background-color: #027cfe;
-            padding: 10px 0;
+            gap: 40px;
+            padding: 16px 0;
+            font-weight: 700;
         }
         nav a {
-            color: rgb(255, 255, 255);
+            color: #1a2940;
             text-decoration: none;
-            margin: 0 15px;
-            font-size: 16px;
+            transition: color 0.2s;
         }
         nav a:hover {
-            text-decoration: underline;
+            color: #f5a623;
         }
-        section {
-            padding: 20px;
-            max-width: 1200px;
-            margin: 50px auto;
-            background: rgb(237, 235, 235);
-            box-shadow: 0 4px 8px rgba(201, 188, 188, 0.1);
-            border-radius: 5px;
-        }
-        footer {
+        .hero {
+            max-width: 900px;
+            margin: 40px auto 0 auto;
+            background: #fff;
+            border-radius: 14px;
+            box-shadow: 0 4px 32px rgba(26,41,64,0.07);
+            padding: 40px 40px 30px 40px;
             text-align: center;
-            padding:  0;
-            background-color: #0481fe;
-            color: white;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
+        }
+        .hero h2 {
+            font-size: 2rem;
+            color: #1a2940;
+            margin-bottom: 18px;
+        }
+        .hero p {
+            font-size: 1.15rem;
+            color: #444;
+            margin-bottom: 0;
+        }
+        .section {
+            max-width: 900px;
+            margin: 40px auto 0 auto;
+            background: #fff;
+            border-radius: 12px;
+            box-shadow: 0 2px 16px rgba(26,41,64,0.06);
+            padding: 30px 35px;
+        }
+        .section-title {
+            color: #1a2940;
+            font-size: 1.4rem;
+            margin-bottom: 18px;
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+        .features {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            margin-top: 18px;
+        }
+        .feature {
+            flex: 1 1 200px;
+            background: #f5f8fa;
+            border-radius: 8px;
+            padding: 24px 18px;
+            margin-bottom: 18px;
+            min-width: 200px;
+            box-shadow: 0 1px 6px rgba(26,41,64,0.04);
+            text-align: center;
+        }
+        .feature h3 {
+            color: #f5a623;
+            font-size: 1.1rem;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+        .feature p {
+            color: #444;
+            font-size: 1rem;
+            margin: 0;
+        }
+        .approach-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .approach-list li {
+            margin-bottom: 16px;
+            font-size: 1.07rem;
+            padding-left: 22px;
+            position: relative;
+        }
+        .approach-list li:before {
+            content: "✔";
+            position: absolute;
+            left: 0;
+            color: #f5a623;
+            font-size: 1.1rem;
+        }
+        .cta {
+            text-align: center;
+            margin: 50px 0 30px 0;
+        }
+        .cta a {
+            background: #f5a623;
+            color: #fff;
+            text-decoration: none;
+            padding: 15px 38px;
+            border-radius: 28px;
+            font-size: 1.15rem;
+            font-weight: 700;
+            box-shadow: 0 2px 8px rgba(26,41,64,0.08);
+            transition: background 0.2s;
+        }
+        .cta a:hover {
+            background: #1a2940;
+        }
+        .footer {
+            background: #1a2940;
+            color: #b3c0d1;
+            text-align: center;
+            padding: 25px 0 12px 0;
+            font-size: 0.98rem;
+            margin-top: 40px;
+        }
+        @media (max-width: 700px) {
+            .hero, .section {
+                padding: 18px 7vw;
+            }
+            .features {
+                flex-direction: column;
+                gap: 0;
+            }
         }
     </style>
 </head>
 <body>
+    <header>
+        <h1>FinanceForensic</h1>
+        <p>International Consulting for Consumer Finance</p>
+    </header>
+    <nav>
+        <a href="#about">About</a>
+        <a href="#expertise">Expertise</a>
+        <a href="#approach">Our Approach</a>
+        <a href="#contact">Contact</a>
+    </nav>
+    <section class="hero" id="about">
+        <h2>Unlocking Growth in Consumer Finance</h2>
+        <p>
+            FinanceForensic is a global consultancy dedicated to empowering companies in the consumer finance sector. With deep expertise in data, process management, and digital transformation, we help clients achieve their most ambitious goals. Our team brings hands-on experience from diverse markets, including India, the Philippines, and Czechia, ensuring solutions that are both innovative and regionally relevant.
+        </p>
+    </section>
 
-<header>
-    <h1>Welcome to FinanceForensic</h1>
-</header>
+    <section class="section" id="expertise">
+        <div class="section-title">Our Expertise</div>
+        <div class="features">
+            <div class="feature">
+                <h3>Data-Driven Strategy</h3>
+                <p>Harnessing analytics to inform every decision and drive business performance.</p>
+            </div>
+            <div class="feature">
+                <h3>Process Optimization</h3>
+                <p>Streamlining operations for efficiency, compliance, and scalability.</p>
+            </div>
+            <div class="feature">
+                <h3>Digital Transformation</h3>
+                <p>Guiding your journey to digital maturity, from systems integration to customer experience enhancement.</p>
+            </div>
+            <div class="feature">
+                <h3>Market Insights</h3>
+                <p>Leveraging global experience to tailor strategies for local success.</p>
+            </div>
+        </div>
+    </section>
 
-<nav>
-    <a href="#about">About</a>
-    <a href="#services">Services</a>
-    <a href="#contact">Contact</a>
-    <a href="#Experts">Experts</a>
-</nav>
+    <section class="section" id="why">
+        <div class="section-title">Why Choose FinanceForensic?</div>
+        <div class="features">
+            <div class="feature">
+                <h3>International Track Record</h3>
+                <p>Successful partnerships across Asia and Europe.</p>
+            </div>
+            <div class="feature">
+                <h3>Tailored Solutions</h3>
+                <p>Every engagement is customized to your business context and objectives.</p>
+            </div>
+            <div class="feature">
+                <h3>End-to-End Support</h3>
+                <p>From initial assessment to implementation and ongoing advisory.</p>
+            </div>
+            <div class="feature">
+                <h3>Trusted by Leaders</h3>
+                <p>Delivered results for top financial institutions and fintech innovators.</p>
+            </div>
+        </div>
+    </section>
 
-<section id="about">
-    <h2>About Us</h2>
-    <p>FinanceForensic is an  international consulting firm that helps companies in consumer finance industry to achieve their primal goals with focus on data, process management and digitalization.
-    Utilizing years of hands on experience from various markets like India, Philippines, Czechia.</p>
-</section>
+    <section class="section" id="approach">
+        <div class="section-title">Our Approach</div>
+        <ul class="approach-list">
+            <li><strong>Objective Evaluation:</strong> Comprehensive assessment of your current operations and market position.</li>
+            <li><strong>Tailored Strategy:</strong> Actionable plans grounded in data and industry best practices.</li>
+            <li><strong>Expert Execution:</strong> Collaborative implementation for seamless integration.</li>
+            <li><strong>Ongoing Assistance:</strong> Continuous support and insights as your business evolves.</li>
+        </ul>
+    </section>
 
- <section id="services">
-    <h2>Our Services</h2>
-    <ul>
-        <li>CRM Funnel reverse engineering / reverse engineering</li>
-        <li>Decision design engineering / reverse engineering</li>
-        <li>Process design / optimization / reverse engineering</li>
-        <li>Compliance / Policy Reviews</li>
-        <li>Data consulting - datamartization </li>
-    </ul>
-</section>
+    <div class="cta" id="contact">
+        <a href="mailto:info@financeforensic.com">Contact Us</a>
+        <p style="margin-top:18px;color:#888;">Global Offices: India | Philippines | Czechia</p>
+    </div>
 
-<section id="contact">
-    <h2>Contact Us</h2>
-    <p>If you have any questions or need our assistance, please feel free to reach out to us.</li>
-    <li>Email: <a href="mailto:jiri.pensimus@seznam.cz">info@financeforensic.com</a></li>
-    <li>Phone: +420 605 855501</p>
-</section>
-
-<section id="Experts">
-    <h2>Experts</h2>
-    <li>Li: <a href="https://www.linkedin.com/in/pensimus-ji%C5%99%C3%AD-8312773"> Jiri Pensimus </a></li>
-</section>
-
-<footer>
-    <p>&copy; 2024 FinanceForensic. All rights reserved.</p>
-</footer>
-
+    <div class="footer">
+        &copy; 2025 FinanceForensic. Your Partner in Consumer Finance Excellence.
+    </div>
 </body>
 </html>
